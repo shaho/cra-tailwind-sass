@@ -1,0 +1,69 @@
+/* eslint-disable */
+
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/base";
+ */
+
+/* eslint-disable no-use-before-define */
+@tailwind base;
+/* eslint-enable no-use-before-define */
+
+/**
+   * This injects any component classes registered by plugins.
+   *
+   * If using `postcss-import`, use this import instead:
+   *
+   * @import "tailwindcss/components";
+   */
+@tailwind components;
+
+/**
+   * Here you would add any of your custom component classes; stuff that you'd
+   * want loaded *before* the utilities so that the utilities could still
+   * override them.
+   *
+   * Example:
+   *
+   * .btn { ... }
+   * .form-input { ... }
+   *
+   * Or if using a preprocessor or `postcss-import`:
+   *
+   * @import "components/buttons";
+   * @import "components/forms";
+   */
+
+/**
+   * This injects all of Tailwind's utility classes, generated based on your
+   * config file.
+   *
+   * If using `postcss-import`, use this import instead:
+   *
+   * @import "tailwindcss/utilities";
+   */
+
+.btn {
+  @apply inline-block px-5 py-3 shadow-lg rounded-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold;
+}
+.btn:hover {
+  @apply bg-indigo-400;
+}
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+.btn:active {
+  @apply bg-indigo-600;
+}
+
+@screen sm {
+  .btn {
+    @apply text-base;
+  }
+}
+
+@tailwind utilities;
