@@ -9,5 +9,14 @@ module.exports = {
   variants: {
     backgroundColor: ["responsive", "hover", "focus", "active"],
   },
-  plugins: [],
+  plugins: [
+    // function({ addComponents }) {
+    //   const buttons = {
+    //     ".btn": {
+    //       ""
+    //     },
+    //   };
+    //   addComponents(buttons);
+    // }, // end function
+  ],
 };

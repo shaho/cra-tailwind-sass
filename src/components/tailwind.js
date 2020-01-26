@@ -1,6 +1,7 @@
 import React from "react";
 // import "../styles/tailwind.css";
 // import "../styles/global.scss";
+import "typeface-work-sans";
 
 export default () => {
   return (
@@ -23,7 +24,7 @@ export default () => {
           You can work from anywhere.
           <span className="text-indigo-500"> Take advantage of it.</span>
         </h1>
-        <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+        <p className="font-sans mt-2 text-gray-600 sm:mt-4 sm:text-xl">
           Workcation helps you find work-friendly rentals in beautiful locations
           so you can enjoy some nice weather even when you're not on vaction.
         </p>

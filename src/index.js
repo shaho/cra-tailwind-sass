@@ -1,10 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "typeface-work-sans";
 
-import "./styles/tailwind.css";
-import "./styles/global.scss";
-import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
