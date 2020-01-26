@@ -25,6 +25,7 @@ function App() {
         <Testica style={{ paddingTop: "10px" }} className="custom">
           Testica
         </Testica>
+        <div css={tw`w-32  h-32 bg-yellow-200`}>Inline</div>
       </Container>
       {/* <Tailwind /> */}
     </>
