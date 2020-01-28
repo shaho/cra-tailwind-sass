@@ -1,4 +1,7 @@
 module.exports = {
+  // corePlugins: {
+  //   preflight: false,
+  // },
   theme: {
     fontFamily: {
       sans: ["Work Sans", "sans-serif"],

@@ -7,7 +7,8 @@ import styled from "styled-components/macro";
 import tw from "tailwind.macro";
 
 // import Tailwind from "./components/tailwind";
-import Footer from "./layout/footer";
+// import Footer from "./layout/footer";
+import Card from "./components/card";
 
 const Container = styled.div`
   ${tw`font-sans flex w-100 items-center flex-col justify-center`}
@@ -22,7 +23,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Container>
+      <Card />
+      {/* <Container>
         <h1>Hello World</h1>
         Container
         <Testica style={{ paddingTop: "10px" }} className="custom">
@@ -36,9 +38,9 @@ function App() {
           placeat nisi omnis, minus dolorum non fuga consequuntur. Dignissimos,
           id.
         </p>
-      </Container>
+      </Container> */}
       {/* <Tailwind /> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

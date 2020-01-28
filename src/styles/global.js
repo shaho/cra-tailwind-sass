@@ -17,6 +17,13 @@ const GlobalStyle = createGlobalStyle`
       antialiased
       `}
     }
+
+    /* TO BE REMOVED */
+    h1, h2, h3, h4, h5, h6 {
+      ${tw`
+        m-0
+      `}
+    }
     img {
       ${tw`max-w-full`}
     }
@@ -46,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     /* Components */
     .btn {
       ${tw`
-        inline-block px-5 py-3 shadow-lg rounded-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold
+        inline-block px-5 py-3 shadow-lg rounded-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:bg-yellow-500
       `}
       &:hover {
         ${tw`
@@ -65,6 +72,7 @@ const GlobalStyle = createGlobalStyle`
         `}
       }
     }
+    
 `;
 
 export default GlobalStyle;
