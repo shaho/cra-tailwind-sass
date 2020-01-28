@@ -34,13 +34,20 @@ const Card = () => {
         <img src={imageUrl} alt={imageAlt} />
 
         <div css={tw`p-6`}>
-          <div
-            css={tw`text-gray-600 text-xs uppercase font-semibold tracking-wide`}
-          >
-            {beds} beds &bull; {baths} baths
+          <div css={tw`flex items-baseline`}>
+            <span
+              css={tw`inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide`}
+            >
+              New
+            </span>
+            <div
+              css={tw`ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide`}
+            >
+              {beds} beds &bull; {baths} baths
+            </div>
           </div>
 
-          <h4 css={tw`font-semibold text-lg leading-tight truncate`}>
+          <h4 css={tw`mt-1 font-semibold text-lg leading-tight truncate`}>
             {title}
           </h4>
 
@@ -59,10 +66,6 @@ const Card = () => {
                       ? tw`h-4 w-4 fill-current text-teal-500`
                       : tw`h-4 w-4 fill-current text-gray-300`
                   }
-                  // css={
-                  //   tw`h-4 w-4 fill-current` &&
-                  //   (i < rating ? tw`text-teal-500` : tw`text-gray-300`)
-                  // }
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
