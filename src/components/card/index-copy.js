@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components/macro";
+import tw from "tailwind.macro";
 
 const PROPERTY = {
   imageUrl:
@@ -25,37 +27,45 @@ const Card = () => {
     rating,
   } = PROPERTY;
   return (
-    <div className="bg-gray-200 min-h-screen p-8 flex items-center justify-center">
-      <div className="bg-white border rounded-lg overflow-hidden">
+    <div
+      css={tw`bg-gray-200 min-h-screen p-8 flex items-center justify-center`}
+    >
+      <div css={tw`bg-white border rounded-lg overflow-hidden`}>
         <img src={imageUrl} alt={imageAlt} />
 
-        <div className="p-6">
-          <div className="flex items-baseline">
-            <span className="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
+        <div css={tw`p-6`}>
+          <div css={tw`flex items-baseline`}>
+            <span
+              css={tw`inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide`}
+            >
               New
             </span>
-            <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
+            <div
+              css={tw`ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide`}
+            >
               {beds} beds &bull; {baths} baths
             </div>
           </div>
 
-          <h4 className="mt-1 font-semibold text-lg leading-tight truncate">
+          <h4 css={tw`mt-1 font-semibold text-lg leading-tight truncate`}>
             {title}
           </h4>
 
-          <div className="mt-1">
+          <div css={tw`mt-1`}>
             {formattedPrice}
-            <span className="text-gray-600 text-sm"> / wk</span>
+            <span css={tw`text-gray-600 text-sm`}> / wk</span>
           </div>
 
-          <div className="mt-2 flex items-center">
+          <div css={tw`mt-2 flex items-center`}>
             {[...Array(5).keys()].map((i) => {
               return (
                 <svg
                   key={i}
-                  className={`h-4 w-4 fill-current ${
-                    i < rating ? "text-teal-500" : "text-gray-300"
-                  }`}
+                  css={
+                    i < rating
+                      ? tw`h-4 w-4 fill-current text-teal-500`
+                      : tw`h-4 w-4 fill-current text-gray-300`
+                  }
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -67,7 +77,7 @@ const Card = () => {
               );
             })}
 
-            <span className="text-gray-600 text-sm ml-2">
+            <span css={tw`text-gray-600 text-sm ml-2`}>
               {reviewCount} reviews
             </span>
           </div>
