@@ -9,6 +9,7 @@ import tw from "tailwind.macro";
 // import Tailwind from "./components/tailwind";
 // import Footer from "./layout/footer";
 import Card from "./components/card";
+import Button from "./components/button/index";
 
 const Container = styled.div`
   ${tw`font-sans flex w-100 items-center flex-col justify-center`}
@@ -24,6 +25,7 @@ function App() {
     <>
       <GlobalStyle />
       <Card />
+      <Button />
       {/* <Container>
         <h1>Hello World</h1>
         Container
