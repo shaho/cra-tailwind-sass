@@ -1,5 +1,6 @@
 import React from "react";
 import "typeface-work-sans";
+import { createGlobalStyle } from "styled-components";
 
 // import GlobalStyle from "./styles/global";
 // import "./styles/global.scss";
@@ -20,28 +21,36 @@ import Card from "./components/card";
 //   border-bottom: 7px solid #ddd;
 // `;
 
+const GlobalStyle = createGlobalStyle`
+	body {
+		font-family: "Work Sans";
+	}
+`;
+
 function App() {
   return (
-    <div className="font-sans">
-      <Card />
-      <div className="font-sans mt-4 sm:mt-6">
+    <>
+      <GlobalStyle />
+      <div>
+        <Card />
+        {/* <div className="font-sans mt-4 sm:mt-6">
         <a
           href="#top"
           className="inline-block px-5 py-3 shadow-lg rounded-lg bg-indigo-500 hover:bg-indigo-400 md:hover:bg-green-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
         >
           Book your escape
         </a>
-      </div>
-      {/* <Tailwind /> */}
-      {/* <div className="flex flex-col w-3/4 mx-auto my-12 items-center">
+      </div> */}
+        {/* <Tailwind /> */}
+        {/* <div className="flex flex-col w-3/4 mx-auto my-12 items-center">
         <h1>Super cool page</h1>
         <Button onClick={() => console.log("I was clicked")}>
           I am a button
         </Button>
       </div> */}
-      {/* <GlobalStyle />
+        {/* <GlobalStyle />
       <Card /> */}
-      {/* <Container>
+        {/* <Container>
         <h1>Hello World</h1>
         Container
         <Testica style={{ paddingTop: "10px" }} className="custom">
@@ -56,9 +65,10 @@ function App() {
           id.
         </p>
       </Container> */}
-      {/* <Tailwind /> */}
-      {/* <Footer /> */}
-    </div>
+        {/* <Tailwind /> */}
+        {/* <Footer /> */}
+      </div>
+    </>
   );
 }
 
